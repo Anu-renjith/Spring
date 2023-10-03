@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- <bean id="beanamp" class="com.example.beanprocessor.CustomProcessor">
+    </bean> -->
+    <!-- 
+    <bean id="empi" class="com.example.beanprocessor.EmployeeEmpI" init-method="initBean" destroy-method="destroyBean">
+    </bean> -->
+  <!-- <bean id="hello" class="com.example.beanprocessor.HelloPrint" init-method="init" destroy-method="destroy">
+   <property name="msg" value="hello amaya"></property>
+    </bean> -->
+  <!-- <bean id="helloworld" class="com.example.beanprocessor.HelloWorld" >
+  <property name="msg1" value="Hello world"></property>
+    <property name="msg2" value="Hello second world"></property>
+    </bean>
+<bean id="helloindia" class="com.example.beanprocessor.HelloIndia" parent="helloworld">
+  <property name="msg2" value="Hello india"></property>
+    <property name="msg3" value="namste india"></property>
+     
+    </bean> -->
+<bean id="beantemplate" abstract="true" >
+  <property name="msg1" value="Hello world"></property>
+    <property name="msg2" value="Hello second world"></property>
+    </bean>
+<bean id="helloindia" class="com.example.beanprocessor.HelloIndia" parent="beantemplate">
+  <property name="msg2" value="Hello india"></property>
+    <property name="msg3" value="namste india"></property>
+     
+    </bean>
+
+   
+</beans>
